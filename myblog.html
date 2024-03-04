@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog page</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="blog">
+        <h1>Welcome to my Blog</h1>
+        <div class="question">
+            <h3 class="question-title" onclick="toggleAnswer(this, 1)">
+                1. Discuss the scope of var, let, and const 
+                <img class="toggle-icon" src="https://www.svgrepo.com/show/2087/plus.svg" alt="Expand">
+            </h3>
+            <div id="answer1" class="answer" style="display: none;">
+                <h3>VAR</h3>
+                <p>Scope: Variables declared with var are scoped to the function in which they are defined. They cannot be accessed outside of this function.</p>
+                <p>Hoisting: When variables are declared with var, they are hoisted to the top of their containing function. This means they can be accessed before they are actually declared, but their value will be undefined until they are initialized.</p>
+                <h3>LET</h3>
+                <p>Scope: Variables declared with let are scoped to the block in which they are defined. This could be within a function, loop, or any code block enclosed by curly braces.</p>
+                <p>Hoisting: let variables are also hoisted, but unlike var, they are not initialized. This means you cannot access them before they are declared within the block.</p>
+                <h3>CONST</h3>
+                <p>Scope: Similar to let, variables declared with const are block-scoped.</p>
+                <p>Immutability: const variables are intended to be constants, meaning their value cannot be reassigned after initialization. However, for objects and arrays declared with const, the properties or elements within them can still be modified.</p>
+                
+            </div>
+            <h3 class="question-title" onclick="toggleAnswer(this, 2)">
+                2. Tell us the use cases of null and undefined 
+                <img class="toggle-icon" src="https://www.svgrepo.com/show/2087/plus.svg" alt="Expand">
+            </h3>
+            <div id="answer2" class="answer" style="display: none;">
+                <h3>NULL</h3>
+                <p>Represents Absence: null signifies the deliberate absence of any object value or value in general. It's used to indicate that a variable or property should have no value or has been intentionally cleared.</p>
+                <p>Placeholder: Can serve as a placeholder or initial value that might be assigned later.</p>
+                <p>Return Value: Some functions or methods may return null to indicate a lack of meaningful result.</p>
+                <h3>UNDEFINED</h3>
+                <p>Default Initialization: Variables declared but not assigned a value are automatically initialized with undefined. Often used as the default value for function parameters and variables.</p>
+                <p>Property Access: Accessing an object property that doesn't exist results in undefined.</p>
+                <p>Array Elements: Accessing an index beyond the array's length yields undefined.</p>
+                <p>Function Returns: Functions not explicitly returning a value return undefined.</p>
+            </div>
+            <h3 class="question-title" onclick="toggleAnswer(this, 3)">
+                3. What do you mean by REST API? 
+                <img class="toggle-icon" src="https://www.svgrepo.com/show/2087/plus.svg" alt="Expand">
+            </h3>
+            <div id="answer3" class="answer" style="display: none;">
+                <p>A REST API, or Representational State Transfer Application Programming Interface, is a software architectural style for designing networked applications. It operates over the Hypertext Transfer Protocol (HTTP) and is based on the concept of resources, which are typically identified by Uniform Resource Identifiers (URIs).</p>
+                <p>REST APIs enable communication between client and server applications by allowing clients to perform various operations on resources, such as retrieving, updating, creating, or deleting them, using standard HTTP methods like GET, POST, PUT, DELETE, etc. This architectural style emphasizes scalability, simplicity, and the uniform interface between components, making it widely adopted for building web services and web-based applications.</p>
+            </div>
+        </div>
+        <a href="./index.html"><button class="back-button">Back to Home</button></a>
+    </div>
+    <script>
+        function toggleAnswer(element, id) {
+            var answer = document.getElementById("answer" + id);
+            var toggleIcon = element.querySelector(".toggle-icon");
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+                toggleIcon.src = "https://www.svgrepo.com/show/45046/minus.svg";
+            } else {
+                answer.style.display = "none";
+                toggleIcon.src = "https://www.svgrepo.com/show/2087/plus.svg";
+            }
+        }
+    </script>
+</body>
+</html>

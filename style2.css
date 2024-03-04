@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.blog {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.question-title {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.answer {
+    margin-left: 20px;
+}
+
+.back-button {
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.toggle-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
